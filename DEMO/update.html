@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Создание заявки</title>
+</head>
+<body>
+    <a href="create.html">Создание заявки</a>
+    <a href="update.html">Обновление заявки</a>
+    <a href="orders.html">Список заявок</a>
+    <iframe name="frame" style="display: none;"></iframe>
+    <form target="frame" action="http://127.0.0.1:8000/update" method="post">
+        <input required type="number" name="number" placeholder="Номер"></br>
+        <input type="text" name="description" placeholder="Описание"></br>
+        <input type="text" name="master" placeholder="Мастер"></br>
+        <input type="text" name="comment" placeholder="Комментарий"></br>
+        <label for="status">Статус</label>
+        <select name="status">
+            <option></option>
+            <option>новая заявка</option>
+            <option>в процессе ремонта</option>
+            <option>завершена</option>
+        </select></br>
+        <input type="submit" value="Обновление">
+    </form>
+</body>
+</html>
